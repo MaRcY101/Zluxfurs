@@ -1,0 +1,327 @@
+@media (max-width: 1330px) {
+    .container {
+        max-width: 970px;
+    }
+
+    .discount-title {
+        font-size: 70px;
+        letter-spacing: 2px;
+    }
+
+    .discount-subtitle {
+        font-size: 40px;
+    }
+
+    .discount-paragraph {
+        font-size: 35px;
+        max-width: 450px;
+    }
+
+    .form-block-row {
+        display: flex;
+        column-gap: 50px;
+        align-items: center;
+    }
+
+    .form-title h2{
+        font-size: 30px;
+        font-weight: 400;
+        padding: 0 60px 0;
+    }
+
+    .form-title h2:before {
+        content: url("/img/sales.svg");
+        position: absolute;
+        left: 0;
+        top: 10px;
+    }
+
+    .form-title h2:after {
+        content: url("/img/coat.svg");
+        position: absolute;
+        top: 10px;
+        right: 0;
+    }
+
+    .form-name, .form-phone, .form-email {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 750px;
+    }
+
+    .nav-list {
+        column-gap: 100px;
+    }
+
+    .nav-list a {
+        font-size: 25px;
+    }
+
+    .main-body {
+        background: url("/img/clouds.png") no-repeat  0 -200px , #D7D1BA no-repeat;
+    }
+
+    .main-body-title {
+        font-size: 80px;
+    }
+
+    .main-body-subtitle h3 {
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 145.297%;
+        letter-spacing: 1px;
+    }
+
+    .main-body-button a {
+        color: #fff;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 145.297%;
+        letter-spacing: 0.72px;
+    }
+
+    .discount {
+        padding: 40px 0;
+    }
+
+    .discount-row {
+        column-gap: 30px;
+    }
+
+    .discount-img {
+        padding: 0;
+    }
+
+    .discount-title {
+        font-size: 50px;
+    }
+
+    .discount-subtitle {
+        font-size: 30px;
+    }
+
+    .discount-paragraph {
+        font-size: 25px;
+        max-width: 410px;
+        line-height: 1.6;
+    }
+
+    .discount-installment {
+        text-align: center;
+        max-width: 300px;
+    }
+
+    .discount-installment p {
+        font-size: 70px;
+        line-height: 145.297%; /* 130.767px */
+        letter-spacing: 10px;
+    }
+
+    .discount-button {
+        margin-top: 40px;
+        padding: 26px 50px;
+    }
+
+    .discount-button a{
+        font-size: 30px;
+        line-height: 1; /* 52.307px */
+        letter-spacing: 0;
+    }
+
+
+    .form-block-row {
+        display: block;
+    }
+
+    form {
+        padding: 20px 0;
+    }
+
+    .form-title h2{
+        font-size: 30px;
+        font-weight: 400;
+        padding: 0;
+        margin: 0;
+    }
+
+    .form-title h2:before {
+        content: url("/img/sales.svg");
+        position: absolute;
+        left: 50px;
+    }
+
+    .form-title h2:after {
+        content: url("/img/coat.svg");
+        position: absolute;
+        right: 50px;
+    }
+
+    .form-name, .form-phone, .form-email {
+        font-size: 30px;
+    }
+
+    .form-button {
+        margin-bottom: 0;
+    }
+
+    .form-block-img{
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .footer-row {
+        display: flex;
+        align-items: flex-end;
+    }
+    
+    .footer-socials {
+        display: block;
+    }
+
+    .social-second {
+        margin-top: 20px;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: none;
+    }
+    
+    .nav-list {
+        display: none;
+    }
+    
+    .nav-button {
+        display: block;
+    }
+
+    .header-nav {
+        padding: 0 30px;
+    }
+
+    .nav.open .nav-list {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: #42506B;
+        z-index: 2;
+        padding: 46px 30px 0 80px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 70px;
+        justify-content: normal;
+    }
+
+    .nav.open .nav-list a{
+        font-size: 40px;
+    }
+
+    .nav.open .nav-button {
+        position: fixed;
+        z-index: 6;
+        right: 40px;
+    }
+
+    .main-body {
+        background: #D7D1BA no-repeat;
+    }
+    
+    .main-body .laptop {
+        display: none;
+    }
+    
+    .main-body .phone {
+        display: block;
+    }
+
+    .main-body-row {
+        display: block;
+        text-align: center;
+    }
+
+    .main-body-text {
+        padding: 50px 0 0 0;
+    }
+
+    .main-body-title {
+        font-size: 82px;
+    }
+
+    .main-body-subtitle h3{
+        font-size: 48px;
+        line-height: 145.297%;
+        letter-spacing: 3.36px;
+    }
+    
+    .discount-row {
+        display: block;
+    }
+
+    .discount-text {
+        text-align: center;
+    }
+
+    .discount-title {
+        font-size: 45px;
+        letter-spacing: 2.7px;
+    }
+
+    .discount-subtitle {
+        font-size: 40px;
+    }
+
+    .discount-paragraph {
+        max-width: none;
+        font-size: 38px;
+        line-height: 145.297%; /* 55.213px */
+        letter-spacing: 0.38px;
+    }
+
+    .discount-installment {
+        margin: 20px auto 0;
+    }
+
+    .discount-img {
+        margin-top: 40px;
+        text-align: center;
+    }
+}
+
+@media (max-width:560px) {
+    .form-title h2:before {
+        content: none;
+    }
+
+    .form-title h2:after {
+        content: none;
+    }
+
+    .form-name, .form-phone, .form-email {
+        font-size: 20px;
+    }
+
+    .footer-location a{
+        font-size: 15px;
+    }
+
+    .footer-socials a{
+        font-size: 18px;
+    }
+
+    .social-first:before {
+        content: url("/img/whatsapp-phone.svg");
+        margin-right: 10px;
+    }
+
+    .social-second:before {
+        content: url("/img/instagram-phone.svg");
+    }
+}
