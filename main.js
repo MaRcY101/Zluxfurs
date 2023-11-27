@@ -25,4 +25,6 @@ navItems.forEach(item => {
     });
 });
 
-AOS.init();
+AOS.init({
+    disable:"mobile"
+});
