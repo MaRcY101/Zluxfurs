@@ -26,5 +26,6 @@ navItems.forEach(item => {
 });
 
 AOS.init({
-    disable:"mobile"
+    // Global settings:
+    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
 });
