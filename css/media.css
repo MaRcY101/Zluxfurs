@@ -321,7 +321,7 @@
         margin-right: 10px;
     }
 
-    .social-second:before {
+    .social-second a:before {
         content: url("/img/instagram-phone.svg");
     }
 }

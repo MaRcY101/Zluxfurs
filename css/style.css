@@ -14,6 +14,10 @@ body {
     padding: 0 10px;
 }
 
+.parent-container {
+    cursor: pointer;
+}
+
 /* Header */
 
 .header {
@@ -108,7 +112,7 @@ body {
     letter-spacing: 2.8px;
 }
 
-.red {
+.main-body-subtitle span {
     color: #FF0000;
 }
 
@@ -381,7 +385,7 @@ form {
     margin-right: 10px;
 }
 
-.social-second:before {
+.social-second a:before {
     content: url("/img/instagram.svg");
     margin-right: 10px;
 }
