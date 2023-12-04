@@ -1,6 +1,23 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw2wlKNEJSlJiXY5XD39lsKD5M7bmZfg8lTcvpk-3s916O2_McbmNjsSIAqJ50a-d8KNQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                responseToUser.innerHTML = "Спасибо, ваши данные успешно отправлены!";
+                setTimeout(function () {
+                    responseToUser.innerHTML = "";
+                }, 2000);
+                form.reset();
+            })
+            .catch(error => console.error('Error!', error.message))
+    })
+
     AOS.init({
         // Global settings:
         disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -35,7 +52,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const nav = document.querySelector('#nav'),
         navBtn = document.querySelector('#nav-btn'),
         navBtnImg = document.querySelector('#nav-btn-img'),
-        navItems = document.querySelectorAll('.nav-item');
+        navItems = document.querySelectorAll('.nav-item'),
+        responseToUser = document.querySelector('.response-to-user');
 
     navBtn.addEventListener('click',(e) => {
         e.preventDefault();
@@ -59,15 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyA9L6pZjvejb4zT0zIxk6pPymIsBGn3vKOI4vmaj1hr4xX0wYuXEbjOGKvevQGpGdUTw/exec'
-    const form = document.forms['submit-to-google-sheet']
 
-    form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log('Success!', response))
-            .catch(error => console.error('Error!', error.message))
-    })
 
 });
 
