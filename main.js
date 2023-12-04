@@ -1,5 +1,12 @@
 
 document.addEventListener('DOMContentLoaded', function() {
+
+    AOS.init({
+        // Global settings:
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+    });
+
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -51,10 +58,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyA9L6pZjvejb4zT0zIxk6pPymIsBGn3vKOI4vmaj1hr4xX0wYuXEbjOGKvevQGpGdUTw/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+    })
+
 });
 
 
-AOS.init({
-    // Global settings:
-    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-});
